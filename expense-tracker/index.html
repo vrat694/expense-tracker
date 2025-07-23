@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Expense Tracker</h1>
+      <p>Track your daily expenses and visualize spending</p>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <form id="expense-form">
+          <input type="text" id="desc" placeholder="Expense Description" required />
+          <input type="number" id="amount" placeholder="Amount (₹)" required />
+          <select id="category">
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Bills">Bills</option>
+            <option value="Other">Other</option>
+          </select>
+          <button type="submit">Add Expense</button>
+        </form>
+      </section>
+
+      <section class="summary">
+        <h2>Summary</h2>
+        <div class="total">
+          Total: ₹<span id="total-amount">0</span>
+        </div>
+        <canvas id="expense-chart" height="200"></canvas>
+      </section>
+
+      <section class="history">
+        <h2>Expense History</h2>
+        <ul id="expense-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Expense Tracker | Built by You</p>
+    </footer>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
